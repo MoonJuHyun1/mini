@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./route_search.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header" class="role-header">
+            <div class="head">
+
+            </div>
+
+        </header>
+        <!-- start page title -->
+        <div id="main" class="role-main">
+            <div class="main_heading head_ticket">
+                <div class="page_title">
+                    <div class="head_ttl container">
+                        <h1>チケット予約</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+            <div class="container">
+                <div class="panel_default">
+                    <div class="panel_heading">
+                        <h2 class="panel_title">
+                            列車選択
+                            <br class="sm">
+                            <!--::after-->
+                        </h2>
+                    </div>
+                    <div class="panel_body">
+                        <p>
+                            お知らせ
+                        </p>
+                        <div class="form-block">
+                            <form class id="form" method="get" action="" novalidate="novalidate"></form>
+                            <section class="route-search-block">
+                                <h3 class="heading">
+                                    <span>日時選択</span>
+                                </h3>
+                                <div class="route-search-block__form1">
+                                    <div class="route-search-block__form1-heading">日程</div>
+                                    <div class="route-search-block__form1-content">
+
+                                        <div class="form-select form-select__ss date-block">
+                                            <select id class="js-select-year" aria-invalid="false">
+                                                <option value="2023" selected>2023</option>
+                                                <option value="2024">2024</option>
+                                            </select>
+                                            <!--::after-->
+                                        </div>
+                                        <div class="form-select form-select__ss">
+                                            <select id class="js-select-month">
+                                                <option value="01">1月.</option>
+                                                <option value="02">2月</option>
+                                                <option value="03">3月</option>
+                                                <option value="04" selected>４月</option>
+                                                <option value="05">５月</option>
+                                                <option value="06">6月</option>
+                                                <option value="07">7月</option>
+                                                <option value="08">8月</option>
+                                                <option value="09">9月</option>
+                                                <option value="10">10月</option>
+                                                <option value="11">11月</option>
+                                                <option value="12">12月</option>
+                                            </select>
+                                            <!--::after-->
+                                        </div>
+                                        <div class="form-select form-select__ss">
+                                            <select id class="js-select-day">
+                                                <option value="01">1日</option>
+                                                <option value="02">2日</option>
+                                                <option value="03">3日</option>
+                                                <option value="04">4日</option>
+                                                <option value="05">5日</option>
+                                                <option value="06">6日</option>
+                                                <option value="07">7日</option>
+                                                <option value="08">8日</option>
+                                                <option value="09">9日</option>
+                                                <option value="10">10日</option>
+                                                <option value="11">11日</option>
+                                                <option value="12">12日</option>
+                                                <option value="13">13日</option>
+                                                <option value="14">14日</option>
+                                                <option value="15">15日</option>
+                                                <option value="16">16日</option>
+                                                <option value="17">17日</option>
+                                                <option value="18">18日</option>
+                                                <option value="19">19日</option>
+                                                <option value="20">20日</option>
+                                                <option value="21">21日</option>
+                                                <option value="22">22日</option>
+                                                <option value="23">23日</option>
+                                                <option value="24">24日</option>
+                                                <option value="25">25日</option>
+                                                <option value="26">26日</option>
+                                                <option value="27">27日</option>
+                                                <option value="28">28日</option>
+                                                <option value="29">29日</option>
+                                                <option value="30">30日</option>
+                                                <option value="31">31日</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="route-search-block__form1-heading">時間</div>
+                                    <div class="route-search-block__form1-content">
+                                        <div class="form-select form-select__ss">
+                                            <select name="inputHour" id class="error" aria-invalid="true">
+                                                <option value>--</option>
+                                                <option value="00">00</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                            </select>
+                                            <!--::after-->
+                                        </div>
+                                        <div class="form-select form-select__ss">
+                                            <select name="inputMinute" class="error">
+                                                <option value>--</option>
+                                                <option value="00">00</option>
+                                                <option value="05">05</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="25">25</option>
+                                                <option value="30">30</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                                <option value="55">55</option>
+                                            </select>
+                                            <!--::after-->
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+                        <input name="inputDate" value="" type="hidden">
+                        <section class="route-search-block md">
+                            <h3 class="heading">
+                                <span>列車指定</span>
+                            </h3>
+                            <div class="route-search-block__form3">
+                                <div class="form-select form-select__l">
+                                    <select name="inputTransportType" id="change-route" class="error" aria-invalid="true">
+                                        <option value data-route="0">選択してください。</option>
+                                        <option value="1" data-route="1">A1</option>
+                                        <option value="1" data-route="2">A2</option>
+                                        <option value="1" data-route="3">A3</option>
+                                        <option value="1" data-route="4">A4</option>
+                                        <option value="1" data-route="5">A5</option>
+                                        <option value="1" data-route="6">A6</option>
+                                        <option value="2" data-route="6">B1</option>
+                                        <option value="2" data-route="6">B2</option>
+                                        <option value="2" data-route="6">B3</option>
+                                        <option value="2" data-route="6">B4</option>
+                                        <option value="2" data-route="6">B5</option>
+                                        <option value="2" data-route="6">B6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="route-search-block">
+                            <h3 class="heading">
+                                <span>出発・到着駅指定</span>
+                            </h3>
+                            <div class="route-search-block__form4">
+                                <div class="route-search-block__form4-1">
+                                    <div class="route-search-block__form4-heading">出発</div>
+                                    <div class="route-search-block__form4-content">
+                                        <div class="form-select form-select__m">
+                                            <select name="inputDepartStName" id="change-route1" class="route-station1 error" aria-invalid="true" disabled>
+                                                <option value="">出発駅選択</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="route-search-block__form4-2">
+                                    <div class="route-search-block__form4-heading">到着</div>
+                                    <div class="route-search-block__form4-content">
+                                        <div class="form-select form-select__m"> 
+                                            <select name="inputArriveStName" id="change-route2" class="route-station2 error" disabled>
+                                                <option>到着駅選択</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+                        <div class="submit-area">
+                            <input name="inputReturnUrl" value="" type="hidden">
+                            <button class="submit_btn submit-area__btn" type="submit" disabled>
+                                <span>
+                                    検索
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
