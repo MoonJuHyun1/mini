@@ -377,3 +377,91 @@ main {
   font-size: 16px;
 }
 
+.route-train-list.inbound .route-train-list__facility {
+  width: 160px;
+  text-align: left;
+}
+
+.route-train-list .route-train-list__train-name.express {
+  background-image: url("../images/line-express-2x.png");
+  background-size: 4px auto;
+  background-position: 28px 0;
+}
+
+.route-train-list .route-train-list__train-name {
+  padding: 13px 20px 15px 60px;
+  background-repeat: repeat-y;
+}
+
+.route-train-list .route-train-list__train-name,.route-train-list .route-train-list__seat-info,.route-train-list .route-train-list__facility,.route-train-list .route-train-list__reserved-seat,.route-train-list .route-train-list__reserved-seat-2,.route-train-list .route-train-list__seat-availability,.route-train-list .route-train-list__seat-reservation,.route-train-list .route-train-list__train-navigation {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.reservation-header .reservation-header__date {
+  padding-left: 50px;
+  text-align: right;
+}
+
+.reservation-header .reservation-header__tel,.reservation-header .reservation-header__id,.reservation-header .reservation-header__date {
+  display: table-cell;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.bordered-heading {
+  margin: 30px 0 12px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ccc;
+  font-size: 18px;
+}
+
+.bordered-heading:before {
+  content: "";
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-color: #000;
+}
+
+.bordered-heading-container.inbound .bordered-heading-container__price {
+  right: 150px;
+}
+
+.bordered-heading-container .bordered-heading-container__price {
+  padding: 2px 15px;
+  border-radius: 2px;
+  min-width: 70px;
+  position: absolute;
+  top: -2px;
+  right: 120px;
+  display: inline-block;
+  color: #000;
+  background-color: #ffdacf;
+  font-weight: bold;
+  text-align: right;
+}
+
+.bordered-heading-container .bordered-heading-container__price > strong {
+  margin-right: 2px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+
+.page-moving-navigation {
+  margin: 40px auto;
+}
+
+.find-btn{
+	text-align: center;
+}
+.find-btn1{
+	display :inline-block;
+}
