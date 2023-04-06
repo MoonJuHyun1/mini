@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ticketSelect</title>
+<<<<<<< HEAD:Train_select.html
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="./select.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./Train_select.js"></script>
+=======
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/select.css">
+>>>>>>> 08dce3ce64618107eec97b9bc2e45dd19ee87099:html/Train_select.html
 </head>
 
 <body>
@@ -45,12 +51,15 @@
                         <ul>
                             <li>
                                 <span class="route-options-header__time">
-                                    <em>プラットホー番号：　　　　　列車番号：　　　　　　列車位置：</em>
-                                    <!-- 이미지 경로 수정 -->
+                                    <div class="parent">
+                                        <div class="first">プラットホー番号：</div>
+                                        <div class="second">列車番号：</div>
+                                        <div class="third">列車位置：</div>
+                                    </div>
+                                        <!-- 이미지 경로 수정 -->
                                     <img src="/ip/kr/common/images/arrow-direction-right-1.png"
                                         　srcset="/ip/kr/common/images/arrow-direction-right-1-2x.png 2x" width="20"
                                         height="6" alt class="inserted-pict">
-                                    <em></em>
                                 </span>
                             </li>
                         </ul>
@@ -58,7 +67,6 @@
                         </div>
                         <form name="formMain1" action="" method="post">
                             <input type="hidden">
-
                         </form>
                     </div>
                     <div class="route-train-list inbound">
@@ -68,7 +76,11 @@
                                     <p class="route-train-list__station-icon">
                                         <span class="departure-station-icon">出発</span>
                                     </p>
+<<<<<<< HEAD:Train_select.html
                                     <p class="route-train-list__time"> <input name="years" type="month" value=""> 時間</p>
+=======
+                                    <p class="route-train-list__time">時間</p>
+>>>>>>> 08dce3ce64618107eec97b9bc2e45dd19ee87099:html/Train_select.html
                                     <h4 class="route-train-list__heading">駅</h4>
                                 </div>
                             </div>
