@@ -6,18 +6,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>main</title>
-        <link rel="stylesheet" href="./reset.css">
-        <link rel="stylesheet" href="./common.css">
-        <link rel="stylesheet" href="./route_search.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/route_search.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./Train_main.js"></script>
+        <script src="./js/Train_main.js"></script>
 </head>
 
 <body>
     <div id="wrapper">
         <header id="header" class="role-header">
             <div class="head">
-
             </div>
 
         </header>
@@ -55,15 +54,15 @@
                                     <div class="route-search-block__form1-content">
 
                                         <div class="form-select form-select__ss date-block">
-                                            <select id class="js-select-year" aria-invalid="false">
+                                            <select id="year" class="js-select-year" aria-invalid="false">
                                                 <option value="2023" selected>2023</option>
                                                 <option value="2024">2024</option>
                                             </select>
                                             <!--::after-->
                                         </div>
                                         <div class="form-select form-select__ss">
-                                            <select id class="js-select-month">
-                                                <option value="01">1月.</option>
+                                            <select id="month" class="js-select-month">
+                                                <option value="01">1月</option>
                                                 <option value="02">2月</option>
                                                 <option value="03">3月</option>
                                                 <option value="04" selected>４月</option>
@@ -79,7 +78,7 @@
                                             <!--::after-->
                                         </div>
                                         <div class="form-select form-select__ss">
-                                            <select id class="js-select-day">
+                                            <select id="day" class="js-select-day">
                                                 <option value="01">1日</option>
                                                 <option value="02">2日</option>
                                                 <option value="03">3日</option>
@@ -117,7 +116,7 @@
                                     <div class="route-search-block__form1-heading">時間</div>
                                     <div class="route-search-block__form1-content">
                                         <div class="form-select form-select__ss">
-                                            <select name="inputHour" id class="error" aria-invalid="true">
+                                            <select name="inputHour" id="inputHour" class="error" aria-invalid="true">
                                                 <option value>--</option>
                                                 <option value="00">00</option>
                                                 <option value="01">01</option>
@@ -147,7 +146,7 @@
                                             <!--::after-->
                                         </div>
                                         <div class="form-select form-select__ss">
-                                            <select name="inputMinute" class="error">
+                                            <select name="inputMinute" id="inputMinute" class="error">
                                                 <option value>--</option>
                                                 <option value="00">00</option>
                                                 <option value="05">05</option>
@@ -202,7 +201,7 @@
                                     <div class="route-search-block__form4-content">
                                         <div class="form-select form-select__m">
                                             <select name="inputDepartStName" id="change-route1" class="route-station1 error" aria-invalid="true"> <!--disabled-->
-                                                <option value="">出発駅選択</option>
+                                                <option value data-route="0">出発駅選択</option>
                                                 <option value="1" data-route="1">浅草駅</option>
                                                 <option value="2" data-route="2">田原町駅</option>
                                                 <option value="3" data-route="3">稲荷町駅</option>
@@ -229,9 +228,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script>
 
-                                </script>
                         </section>
                         <div class="submit-area">
                             <input name="inputReturnUrl" value="" type="hidden">
