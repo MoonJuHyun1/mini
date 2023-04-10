@@ -2,8 +2,8 @@
 function sve()
 {
     // var fm = document.form;
-    var fm = document.getElementById("from");
-    var year1 = document.getElementById("year");
+    let fm = document.getElementById("from");
+    let year1 = document.getElementById("year");
     var year = year1.options[year1.selectedIndex].value;
     console.log(year)
     var month1 = document.getElementById("month");
