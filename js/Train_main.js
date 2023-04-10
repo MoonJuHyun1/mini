@@ -4,34 +4,34 @@ function sve()
     // var fm = document.form;
     let fm = document.getElementById("from");
     let year1 = document.getElementById("year");
-    var year = year1.options[year1.selectedIndex].value;
+    let year = year1.options[year1.selectedIndex].value;
     console.log(year)
-    var month1 = document.getElementById("month");
-    var month = month1.options[month1.selectedIndex].value;
+    let month1 = document.getElementById("month");
+    let month = month1.options[month1.selectedIndex].value;
     console.log(month)
-    var day1 = document.getElementById("day");
-    var day = day1.options[day1.selectedIndex].value;
+    let day1 = document.getElementById("day");
+    let day = day1.options[day1.selectedIndex].value;
     console.log(day)
-    var inputHour1 = document.getElementById("inputHour");
-    var inputHour = inputHour1.options[inputHour1.selectedIndex].value;
+    let inputHour1 = document.getElementById("inputHour");
+    let inputHour = inputHour1.options[inputHour1.selectedIndex].value;
     console.log(inputHour)
-    var inputMinute1 = document.getElementById("inputMinute");
-    var inputMinute = inputMinute1.options[inputMinute1.selectedIndex].value;
+    let inputMinute1 = document.getElementById("inputMinute");
+    let inputMinute = inputMinute1.options[inputMinute1.selectedIndex].value;
     console.log(inputMinute)
 
-    var route00 = document.getElementById("change-route");
-    var route = route00.options[route00.selectedIndex].text;
+    let route00 = document.getElementById("change-route");
+    let route = route00.options[route00.selectedIndex].text;
     console.log(route)
 
-    var route11 = document.getElementById("change-route1");
+    let route11 = document.getElementById("change-route1");
     console.log(route11)
-    var route1 = route11.options[route11.selectedIndex].value;
+    let route1 = route11.options[route11.selectedIndex].value;
     console.log(route1)
 
 
-    var route22 = document.getElementById("change-route2");
+    let route22 = document.getElementById("change-route2");
     console.log(route22)
-    var route2 = route22.options[route22.selectedIndex].value;
+    let route2 = route22.options[route22.selectedIndex].value;
     console.log(route2)
 
     fm.action = 'Train_select.html';
