@@ -1,7 +1,7 @@
     ej.base.enableRipple(true);
 
-    var data = new ej.data.DataManager(window.hierarchyOrderdata).executeLocal(new ej.data.Query().take(15));
-    var grid = new ej.grids.Grid({
+    let data = new ej.data.DataManager(window.hierarchyOrderdata).executeLocal(new ej.data.Query().take(15));
+    let grid = new ej.grids.Grid({
     dataSource: data,
     columns: [
                 { field: '列車番号', headerText: '列車番', width: 120, textAlign: 'Right' },
@@ -14,12 +14,12 @@
     });
     grid.appendTo('#Grid');
 
-    var button = new ej.buttons.Button({ cssClass: `e-primary` }, '#close');
-    var submitbutton = new ej.buttons.Button({ cssClass: `e-primary` }, '#submit');
+    let button = new ej.buttons.Button({ cssClass: `e-primary` }, '#close');
+    let submitbutton = new ej.buttons.Button({ cssClass: `e-primary` }, '#submit');
 
     document.getElementById("Gridform").addEventListener("A1", (e) => {
     e.preventDefault();
-    var value = parseInt(document.getElementById('multiplier').value, 10);
+    let value = parseInt(document.getElementById('multiplier').value, 10);
     data = new ej.data.DataManager(window.hierarchyOrderdata).executeLocal(new ej.data.Query().where("EmployeeID", "equal", value).take(15))
     grid.dataSource = data;
     document.getElementById("userinput").style.display = "none";
