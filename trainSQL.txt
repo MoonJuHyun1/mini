@@ -471,10 +471,19 @@ values
     "7"
 );
 
-select * from tr_info left join trr_reservation on Tr_id left join trs_seat on Tr_id;
+select * from ((tr_info inner join trr_reservation on Tr_info.Tr_id = trr_reservation.Tr_info_Tr_id ) inner join trs_seat on Tr_info.Tr_id = trs_seat.Tr_info_Tr_id);
 select * from tr_info;
 select * from trr_reservation;
 select * from trs_seat;
+
+# - 기차 테이블 더미 데이터 불러오기
+select Tr_id, Tr_name, Tr_start, Tr_end from tr_info;
+# - 예약 테이블 더미 데이터 불러오기
+select tr_info.Tr_id,trr_id ,Trr_start, Trr_end,Trs_seat_Trs_id,Trr_reserved,Trs_price from ((tr_info inner join trr_reservation on trr_reservation.Tr_info_Tr_id = tr_info.Tr_id) inner join trs_seat on trr_reservation.Tr_info_Tr_id = trs_seat.Tr_info_Tr_id)where tr_id = 123;
+# -자리 예약시 데이터 불러오기
+select tr_info.Tr_id,trr_id , Trr_start, Trr_end,Trs_seat_Trs_id,Trr_reserved,Tr_arrivaltime,Trs_price from ((tr_info inner join trr_reservation on trr_reservation.Tr_info_Tr_id = tr_info.Tr_id) inner join trs_seat on trr_reservation.Tr_info_Tr_id = trs_seat.Tr_info_Tr_id)where tr_id = 123;
+# -열차정보값 가져오기
+select Tr_id , count(Trs_seat) as "좌석", count(Trr_reserved) as "예약상태" from ((tr_info inner join trs_seat on tr_info.Tr_id = trs_seat.Tr_info_Tr_id)inner join trr_reservation on tr_info.Tr_id = trr_reservation.Tr_info_Tr_id) group by Tr_id;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
