@@ -50,7 +50,7 @@
                                         <div class="second">列車番号：</div>
                                         <div class="third">列車位置：</div>
                                     </div>
-                                        <!-- 이미지 경로 수정 -->
+                                    <!-- 이미지 경로 수정 -->
                                     <img src="/ip/kr/common/images/arrow-direction-right-1.png"
                                         　srcset="/ip/kr/common/images/arrow-direction-right-1-2x.png 2x" width="20"
                                         height="6" alt class="inserted-pict">
@@ -71,6 +71,7 @@
                                         <span class="departure-station-icon">出発</span>
                                     </p>
                                     <p class="route-train-list__time"> <input name="years" type="month" value=""> 時間</p>
+
                                     <h4 class="route-train-list__heading">駅</h4>
                                 </div>
                             </div>
@@ -81,95 +82,82 @@
                                 <div class="route-train-list__seat-info js-filfac-scope">
                                     <table class="seat-facility js-filfac-target">
                                         <thead>
-                                            <th scope="col" data-search-id="" class="seat-facility-none is-current">
-                                                <div>
-                                                    <button>A1</button>
-                                                </div>
-                                                <div>
-                                                    <button>B1</button>
-                                                </div>
-                                            </th>
-                                            <th scope="col" data-search-id="" class="seat-facility-none is-current">
-                                                <div>
-                                                    <button>A2</button>
-                                                </div>
-                                                <div>
-                                                    <button>B2</button>
-                                                </div>
-                                            </th>
-                                            <th scope="col" data-search-id="" class="seat-facility-none is-current">
-                                                <div>
-                                                    <button>A3</button>
-                                                </div>
-                                                <div>
-                                                    <button>B3</button>
-                                                </div>
-                                            </th>
+                                            <tr>
+                                                <th scope="col" data-search-id="" class="seat-facility-none is-current">
+                                                    <div>
+                                                        <button onclick="selectSeat('A1')">A1</button>
+                                                    </div>
+                                                    <div>
+                                                        <button onclick="selectSeat('B1')">B1</button>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" data-search-id="" class="seat-facility-none is-current">
+                                                    <div>
+                                                        <button onclick="selectSeat('A2')">A2</button>
+                                                    </div>
+                                                    <div>
+                                                        <button onclick="selectSeat('B2')">B2</button>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" data-search-id="" class="seat-facility-none is-current">
+                                                    <div>
+                                                        <button onclick="selectSeat('A3')">A3</button>
+                                                    </div>
+                                                    <div>
+                                                        <button onclick="selectSeat('B3')">B3</button>
+                                                    </div>
+                                                </th>
+                                            </tr>
                                         </thead>
                                     </table>
                                 </div>
                             </div>
-                        </section>
-                        <section>
-                            <div class="route-train-list__header">
-                                <div class="route-train-list__header-inner">
-                                    <p class="route-train-list__station-icon">
-                                        <span class="arrival-station-icon">到着</span>
-                                    </p>
-                                    <p class="route-train-list__time">時間</p>
-                                    <h4 class="route-train-list__heading">駅</h4>
+                            <section>
+                                <div class="route-train-list__header">
+                                    <div class="route-train-list__header-inner">
+                                        <p class="route-train-list__station-icon">
+                                            <span class="arrival-station-icon">到着</span>
+                                        </p>
+                                        <p class="route-train-list__time">時間</p>
+                                        <h4 class="route-train-list__heading">駅</h4>
+                                    </div>
                                 </div>
-                            </div>
+                            </section>
+                            <section>
+                                <h3 class="page-lev2-heading">予約内訳確認</h3>
+                                <table class="condition-table condition-table--4cols-4">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">列車番号</th>
+                                            <th scope="col">出発/到着</th>
+                                            <th scope="col">座席番号</th>
+                                            <th scope="col">料金</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="seat-list"></tbody>
+                                </table>
+                            </section>
                         </section>
-                    </div>
-                    <!-- <h2 class="page-lev1-heading">
-                        <strong class="reservation-icon">予約確認</strong>
-                        予約詳細内訳
-                    </h2> -->
-                    <section>
-                        <h3 class="page-lev2-heading">
-                            予約内訳確認
-                        </h3>
-                        <table class="condition-table condition-table--4cols-4">
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <thead>
-                                <th scope="col">列車番号</th>
-                                <th scope="col">乗車日</th>
-                                <th scope="col">出発/到着</th>
-                                <th scope="col">料金</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                    <form>
-                        <ul class="button-navigation">
-                            <li>
-                                <button type="submit" class="decide-button" onclick="">
-                                    <span>
-                                        お支払い
-                                        <span class="button-note"></span>
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
-                    </form>
+            </main>
+
+                <ul class="button-navigation">
+                    <li>
+                        <button type="submit" class="decide-button" onclick="">
+                            <span>
+                                お支払い
+                                <span class="button-note"></span>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
         </div>
-
-        </section>
-
-        </main>
 </body>
 
 </html>
