@@ -4,6 +4,7 @@ let departureArrival = "";
 let selectedSeat = "";
 let seatPrice = 0;
 
+
 // seat list에 좌석 정보 추가하는 함수
 function addSeatToList() {
   // seat list table 가져오기

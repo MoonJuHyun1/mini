@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id="eki" onclick=tes()>駅</button>
+    <br>
+    <p>出発 : Mito(Ibaraki)</p>
+    <br>
+        <input id="eki1" type="button" value="Hitachitaga"/>
+        <input id="eki2" type="button" value="Omika"/>
+        <input id="eki3" type="button" value="Tokai"/>
+        <input id="eki4" type="button" value="Sawa(Ibaraki)"/>
+        <input id="eki5" type="button" value="Katsuta"/>
+        <input id="eki6" type="button" value="Mito(Ibaraki)"/>
+        <p id="time"></p>
+        <p id="time0"></p>
+
+        <script>
+            let count = 0;
+            let time = document.getElementById('time');
+            let time0 = document.getElementById('time0');
+            
+            function tes(){
+                
+                let time1 = new Date();
+                let hour = time1.getHours();
+                let minutes = time1.getMinutes();
+                let seconds = time1.getSeconds();
+                count += 1;
+                console.log(count);
+    
+                if(minutes.toString().length == 1){
+                    minutes = "0"+minutes;
+                }
+                if(seconds.toString().length == 1){
+                    seconds = "0"+seconds;
+                }
+    
+                if(count >= 5){
+                    const eki1 = document.getElementById("eki1");
+                    eki1.disabled = true;
+                    console.log("end1");
+                }
+                if(count >= 10){
+                    const eki2 = document.getElementById("eki2");
+                    eki2.disabled = true;
+                    console.log("end2");
+                }
+                if(count >= 15){
+                    const eki2 = document.getElementById("eki3");
+                    eki2.disabled = true;
+                    console.log("end3");
+                }
+                if(count >= 20){
+                    const eki2 = document.getElementById("eki4");
+                    eki2.disabled = true;
+                    console.log("end4");
+                }
+                if(count >= 25){
+                    const eki2 = document.getElementById("eki5");
+                    eki2.disabled = true;
+                    console.log("end5");
+                }
+                if(count >= 30){
+                    const eki2 = document.getElementById("eki6");
+                    eki2.disabled = true;
+                    console.log("end6");
+                }
+                time.innerHTML = (hour + ":" +minutes + ":" + seconds);
+            }
+            setInterval(tes, 1000);
+        </script>
+    
+</body>
+</html>
