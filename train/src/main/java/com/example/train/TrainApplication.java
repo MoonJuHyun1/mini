@@ -1,15 +1,13 @@
-package com.teco.trainsystem;
+package com.example.train;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class TrainProjectApplication {
+public class TrainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TrainProjectApplication.class, args);
+		SpringApplication.run(TrainApplication.class, args);
 	}
-	
 
 }

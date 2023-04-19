@@ -1,10 +1,10 @@
-package com.teco.trainsystem;
+package com.example.train;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TrainProjectApplicationTests {
+class TrainApplicationTests {
 
 	@Test
 	void contextLoads() {
