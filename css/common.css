@@ -1063,10 +1063,8 @@ h2.heading, h3.heading {
 	font-size: 18px;
 	padding: 9px 10px 9px 11px;
 	margin-bottom: 15px;
-	margin-top: 15px;
 	font-weight: bold;
 	clear: both;
-
 }
 h2.heading span, h3.heading span {
 	display: block;
@@ -1203,3 +1201,4 @@ h4.title02 {
 .mainte_booking.red h4{
 	color:#CC0000 !important;
 }
+
