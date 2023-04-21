@@ -1,4 +1,4 @@
-// 변수 초기화
+ // 변수 초기화
 let trainNumber = "";
 let departureArrival = "";
 let selectedSeat = "";
@@ -92,3 +92,4 @@ function selectTrain(trainNumberElement) {
 const trainNumberElements = document.querySelectorAll(
   ".js-train-selector .route-train-list__train-name"
 );
+ 
