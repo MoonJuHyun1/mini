@@ -5,6 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>TrainMain</title>
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/select.css">
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/reset.css">
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/common.css">
+  
 </head>
 <body onload="setDateTime()">
     <div id="wrapper">
@@ -138,6 +142,6 @@
             </div>
         </form>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="../js/Train_main.js"></script>
+        <script src="${pageContext.request.contextPath}/js/Train_main.js"></script>
     </body>
 </html>
