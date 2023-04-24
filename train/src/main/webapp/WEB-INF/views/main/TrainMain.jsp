@@ -8,6 +8,7 @@
  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/select.css">
  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/reset.css">
  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/common.css">
+  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/route_search.css">
   
 </head>
 <body onload="setDateTime()">
