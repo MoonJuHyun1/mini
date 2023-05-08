@@ -1,7 +1,29 @@
+<%@page import="java.util.List"%>
+<%@page import="com.teco.train.domain.Traininfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+	Traininfo[] train = new Traininfo[6];
+	
+	List<Traininfo> list = (List)request.getAttribute("list");
+	for(int i =0; i < list.size(); i++){
+		for(Traininfo tr : list){
+			if(tr != null){
+				int num = tr.getTrain_id();
+				String name = tr.getStation_name();
+				int res = tr.getReser();
+				train[i].setTrain_id(num);
+				train[i].setStation_name(name);
+				train[i].setReser(res);
+			}else if (tr == null){
+				return;
+			}
+		}
+	}
+%>
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>TrainInformation</title>
@@ -22,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <main>
+           		<main>
                         <section>
                             <table class="condition-table condition-table--4cols-1">
                                 <colgroup>
@@ -47,54 +69,52 @@
                                 <tbody>
                                     <tr>
                                         <th>列車番号</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                    </tr>
+                                   	<p><%train[0].getTrain_id(); %> </p>
+<%--                                         <th><%list[1]%></th>
+                                        <th><%list[2]%></th>
+                                        <th><%list[3]%></th>
+                                        <th><%list[4]%></th>
+                                        <th><%list[5]%></th>
+  --%>                                   </tr>
                                     <tr>
-                                        <th>停車パターン</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                    </tr>
+<%--                                        <th>停車パターン</th>
+                                        <th><%list[0]%></th>
+                                        <th><%list[1]%></th>
+                                        <th><%list[2]%></th>
+                                        <th><%list[3]%></th>
+                                        <th><%list[4]%></th>
+                                        <th><%list[5]%></th>
+ --%>                                    </tr>
                                     <tr>
                                         <th>列車位置</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                    </tr>
+<%--                                         <th><%list[0].station_name %></th>
+                                        <th><%list[1].station_name %></th>
+                                        <th><%list[2].station_name %></th>
+                                        <th><%list[3].station_name %></th>
+                                        <th><%list[4].station_name %></th>
+                                        <th><%list[5].station_name %></th>
+--%>                                    </tr>
                                     <tr>
                                         <th>残席数</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                        <th>--</th>
-                                    </tr>
+<%--                                         <th><%list[0].reser %></th>
+                                        <th><%list[1].reser %></th>
+                                        <th><%list[2].reser %></th>
+                                        <th><%list[3].reser %></th>
+                                        <th><%list[4].reser %></th>
+                                        <th><%list[5].reser %></th>
+--%>                                    </tr>
                                     <tr>
                                         <th>予約状況</th>
-                                        <th><a href="#">確認</a></th>
-                                        <th><a href="#">確認</a></th>
-                                        <th><a href="#">確認</a></th>
-                                        <th><a href="#">確認</a></th>
-                                        <th><a href="#">確認</a></th>
-                                        <th><a href="#">確認</a></th>
+                                        <th><a href="/TrainResult">確認</a></th>
+                                        <th><a href="/TrainResult">確認</a></th>
+                                        <th><a href="/TrainResult">確認</a></th>
+                                        <th><a href="/TrainResult">確認</a></th>
+                                        <th><a href="/TrainResult">確認</a></th>
+                                        <th><a href="/TrainResult">確認</a></th>
                                     </tr>
                                 </tbody>
                             </table>
                         </section>
-                    </section>
-                    
                 </main>
             </body>
 </html>

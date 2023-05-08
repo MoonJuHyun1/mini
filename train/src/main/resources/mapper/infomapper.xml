@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- TrainMapper.xml -->
+<mapper namespace="com.teco.train.repository.TraininfoMapper">
+    <select id="selectalltrains" resultType="com.teco.train.domain.Traininfo">
+        select tr.train_id,sta.station_name,trs.Trs_seat from ((train as tr inner join station as sta on tr.departure_station = sta.station_name)inner join train_seat as trs on tr.train_id = trs.train_train_id) order by train_id
+    </select>
+    <select id="sele" resultType="com.teco.train.domain.Traininfo">
+        select tr.train_id,sta.station_name,trs.Trs_seat from ((train as tr inner join station as sta on tr.departure_station = sta.station_name)inner join train_seat as trs on tr.train_id = trs.train_train_id) order by train_id
+    </select>
+</mapper>
