@@ -1,31 +1,15 @@
+<%@page import="java.time.LocalTime"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.util.List"%>
 <%@page import="com.teco.train.domain.Traininfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-	Traininfo[] train = new Traininfo[6];
-	
-	List<Traininfo> list = (List)request.getAttribute("list");
-	for(int i =0; i < list.size(); i++){
-		for(Traininfo tr : list){
-			if(tr != null){
-				int num = tr.getTrain_id();
-				String name = tr.getStation_name();
-				int res = tr.getReser();
-				train[i].setTrain_id(num);
-				train[i].setStation_name(name);
-				train[i].setReser(res);
-			}else if (tr == null){
-				return;
-			}
-		}
-	}
-%>
+
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
 <title>TrainInformation</title>
 </head>
 <body>
@@ -66,43 +50,48 @@
                                         <th scope="col">6</th>
                                     </tr>
                                 </thead>
+                           
                                 <tbody>
                                     <tr>
-                                        <th>列車番号</th>
-                                   	<p><%train[0].getTrain_id(); %> </p>
-<%--                                         <th><%list[1]%></th>
-                                        <th><%list[2]%></th>
-                                        <th><%list[3]%></th>
-                                        <th><%list[4]%></th>
-                                        <th><%list[5]%></th>
-  --%>                                   </tr>
+	                                        <th>列車番号</th>
+	                                   		<th>${tr[0].train_id}</th>
+  	                                        <th>${tr[1].train_id}</th>
+	                                        <th>${tr[2].train_id}</th>
+	                                        <th>${tr[3].train_id}</th>
+	                                        <th>${tr[4].train_id}</th>
+	                                        <th>${tr[5].train_id}</th>
+                                   </tr>
+
+                                   
+                                   
                                     <tr>
-<%--                                        <th>停車パターン</th>
-                                        <th><%list[0]%></th>
-                                        <th><%list[1]%></th>
+                                        <th>停車パターン</th>
+                                        <th></th>
+                                        <th>${time[0].departure_time}</th>
+<%--                                        <th><%list[1]%></th>
                                         <th><%list[2]%></th>
                                         <th><%list[3]%></th>
                                         <th><%list[4]%></th>
                                         <th><%list[5]%></th>
- --%>                                    </tr>
+ --%>                                   </tr>
                                     <tr>
                                         <th>列車位置</th>
-<%--                                         <th><%list[0].station_name %></th>
-                                        <th><%list[1].station_name %></th>
-                                        <th><%list[2].station_name %></th>
-                                        <th><%list[3].station_name %></th>
-                                        <th><%list[4].station_name %></th>
-                                        <th><%list[5].station_name %></th>
---%>                                    </tr>
+                                        <th>${tr[0].station_name}</th>
+                                        <th>${tr[1].station_name}</th>
+                                        <th>${tr[2].station_name}</th>
+                                        <th>${tr[3].station_name}</th>
+                                        <th>${tr[4].station_name}</th>
+                                        <th>${tr[5].station_name}</th>
+                                    </tr>
                                     <tr>
                                         <th>残席数</th>
-<%--                                         <th><%list[0].reser %></th>
-                                        <th><%list[1].reser %></th>
-                                        <th><%list[2].reser %></th>
-                                        <th><%list[3].reser %></th>
-                                        <th><%list[4].reser %></th>
-                                        <th><%list[5].reser %></th>
---%>                                    </tr>
+                                        <th>${tr[0].reser}</th>
+                                        <th>${tr[1].reser}</th>
+                                        <th>${tr[2].reser}</th>
+                                        <th>${tr[3].reser}</th>
+                                        <th>${tr[4].reser}</th>
+                                        <th>${tr[5].reser}</th>
+                                    </tr>
                                     <tr>
                                         <th>予約状況</th>
                                         <th><a href="/TrainResult">確認</a></th>
@@ -114,6 +103,7 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        	
                         </section>
                 </main>
             </body>

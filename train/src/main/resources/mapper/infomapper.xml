@@ -5,7 +5,19 @@
     <select id="selectalltrains" resultType="com.teco.train.domain.Traininfo">
         select tr.train_id,sta.station_name,trs.Trs_seat from ((train as tr inner join station as sta on tr.departure_station = sta.station_name)inner join train_seat as trs on tr.train_id = trs.train_train_id) order by train_id
     </select>
-    <select id="sele" resultType="com.teco.train.domain.Traininfo">
-        select tr.train_id,sta.station_name,trs.Trs_seat from ((train as tr inner join station as sta on tr.departure_station = sta.station_name)inner join train_seat as trs on tr.train_id = trs.train_train_id) order by train_id
+    <select id="stationselect" resultType="com.teco.train.domain.station">
+        select station_id,station_name from station
     </select>
+    <select id="trstatselect" resultType="com.teco.train.domain.trainstation">
+    	select st.station_id as station_id1,tr.departure_station,stat.station_id as station_id2,tr.arrival_station from (station as st inner join train as tr on st.station_name = tr.departure_station) inner join station as stat on stat.station_name = tr.arrival_station order by train_id
+	</select>
+	
+	<select id="startend" parameterType="integer" resultType="com.teco.train.domain.station">
+    	<![CDATA[select * from station where station_id >= ${station_id1} and station_id <= ${station_id2}]]>
+    </select>
+    
+    <select id="timeon" resultType="com.teco.train.domain.time">
+    	select tr.train_id,tr.departure_time,tr.arrival_time,st.interval_time from station as st inner join train as tr on st.station_name = tr.departure_station order by tr.train_id
+    </select>
+    
 </mapper>
