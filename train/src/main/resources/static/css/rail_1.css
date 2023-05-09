@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+/*******************************************************************************
+*
+* 処理中画面
+*
+*******************************************************************************/
+/*=========================================
+ヘッダー
+=========================================*/
+.header {
+  width: 100%;
+  height: auto;
+}
+
+.header_menuListW {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  height: auto;
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
+}
+@media print, screen and (min-width: 750px) {
+  .header_menuListW {
+    height: 84px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 3px 2px #e5e5e5;
+    position: relative;
+  }
+}
+
+.header_menuList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media print, screen and (min-width: 750px) {
+  .header_menuList {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.header_menuListTitle {
+  order: 2;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+.header_menuListTitle img {width: 100%;}
+@media print, screen and (min-width: 750px) {
+  .header_menuListTitle {
+    order: 2;
+    width: 287px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+}
+
+
+.header_menuListJrlogo {
+  order: 3;
+  width: 52px;
+  height: auto;
+  margin-left: 12px;
+}
+@media print, screen and (min-width: 750px) {
+  .header_menuListJrlogo {
+    order: 4;
+    margin-left: 20px;
+  }
+}
+
+.header_menuListJrlogoLink {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header_menuListJrlogoLinkInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+  border-left: 1px solid #d9d9d9;
+}
+.header_menuListJrlogoLinkInner img {
+  width: 29px;
+  height: 22px;
+}
+@media print, screen and (min-width: 750px) {
+  .header_menuListJrlogoLinkInner img {
+    width: 44px;
+    height: 34px;
+  }
+}
+@media print, screen and (min-width: 750px) {
+  .header_menuListJrlogoLinkInner {
+    border: none;
+    height: 34px;
+  }
+}
+
+/* 専用ヘッダー */
+#loading .header_menuList {
+	height:48px;
+	align-items: center;
+}
+.header_menuListTitleH {margin-left: 6px;}
+@media print, screen and (min-width: 750px) {
+	.header_menuListTitleH {margin-left:0;}
+}
+
+
+/* コンテンツ */
+
+div.top_blurW{
+  z-index: 1600;
+}
+.trainSearch_loading {
+  display: block;
+}
+div.idxFooter_copy_loading {
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+.idxFooter_copyTxt_loading {
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 35px;
+}
+.ts_loadingW {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 100%;
+	height: auto;
+}
+@media print, screen and (min-width: 750px) {
+	.ts_loadingW {
+		max-width: 810px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.ts_loadingTitle {
+	display: flex;
+	justify-content:space-between;
+	margin-bottom:30px;
+	width:100%;
+	height:auto;
+	font-size:1.8rem;
+	font-weight:normal;
+}
+
+
+#ts_loading-cont p#ts_loading-txt {
+	text-align: center;
+	font-size: 1.13rem;
+}
+#ts_loading-train {display: none;}
+#ts_loading-train-sp {
+	display: block;
+	margin:15px auto 5vh;
+	width:72%;
+}
+#ts_loading-train-sp img {width:100%;}
+
+@media print, screen and (min-width: 750px) {
+	#ts_loading-cont {
+		overflow: hidden;
+		position: relative;
+		box-sizing: border-box;
+		margin-bottom: 85px;
+		/* padding-top: 170px; */
+		max-width:780px;
+		height:390px;
+		/* background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_loading_bg.png") 0 0 no-repeat; */
+	}
+	#ts_loading-cont p#ts_loading-txt {
+		font-size: 1.25rem;
+	}
+  #ts_loading-txt {
+    position: absolute;
+    top: calc(100%/2 - 25px);
+    left: 50%;
+    transform: translate(-50%);
+  }
+	#ts_loading-train {
+		display: block;
+		visibility:hidden;
+		position: absolute;
+		bottom:0;
+		left:-1400px;
+/*		left:-800px;*/
+	}
+	#ts_loading-train img {display: block;}
+	#ts_loading-train-sp {display: none;}
+}

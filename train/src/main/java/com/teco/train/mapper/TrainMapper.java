@@ -1,13 +1,12 @@
-package com.teco.train.repository;
+package com.teco.train.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.teco.train.domain.Train;
+import com.teco.train.DTO.Train;
 
 @Mapper
 public interface TrainMapper {
-	public List<Train> selectAllTrains();
-
+	List<Train> selectTrain() throws Exception;
 }
