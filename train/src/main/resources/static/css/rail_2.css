@@ -1,0 +1,479 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+/*******************************************************************************
+*
+* 無料利用券ブロック
+*
+*******************************************************************************/
+/*=========================================
+ボタンテンプレート
+=========================================*/
+/* デフォルトCSSを無効にするだけのCSS */
+/* 高強調ボタン大 */
+/* 高強調ボタン中 */
+/* 高強調ボタン小 */
+/* 高強調ボタン小　インライン */
+/* 高強調ボタン大　背景緑 */
+/* 高強調ボタン中　背景緑 */
+/* 高強調ボタン小　背景緑 */
+/* 高強調ボタン小　背景緑　インライン */
+/* 高強調ボタン大　背景白 */
+/* 高強調ボタン中　背景白 */
+/* 高強調ボタン小　背景白 */
+/* 高強調ボタン小　背景白　インライン */
+/* 中強調ボタン大　緑 */
+/* 中強調ボタン中　緑 */
+/* 中強調ボタン小　緑 */
+/* 中強調ボタン小　緑　インライン */
+/* 中強調ボタン大　背景緑 */
+/* 中強調ボタン中　背景緑 */
+/* 中強調ボタン小　背景緑 */
+/* 中強調ボタン小　背景緑　インライン */
+/* 中強調ボタン大　青 */
+/* 中強調ボタン中　青 */
+/* 中強調ボタン小　青 */
+/* 中強調ボタン小　青　インライン */
+/* サブボタン小　青 */
+/* サブボタン小　緑 */
+/* サブボタン小　グレー */
+/* ボタン内のフォントサイズ変更 */
+.tmp_btn_font-small {
+  font-size: 70%; }
+
+/* アイコン設置用 */
+.tmp_btn_icon-posLeft {
+  padding-left: 30px !important; }
+
+.tmp_btn_icon-posRight {
+  padding-right: 30px !important; }
+
+.tmp_btn_icon-back-green::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngreen-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+.tmp_btn_icon-back-green.nonselect::before {
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+
+.tmp_btn_icon-next-green::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngreen-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+.tmp_btn_icon-next-green.nonselect::after {
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+
+.tmp_btn_icon-back-blue::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtnblue-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+.tmp_btn_icon-back-blue.nonselect::before {
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+
+.tmp_btn_icon-next-blue::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtnblue-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+.tmp_btn_icon-next-blue.nonselect::after {
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+
+.tmp_btn_icon-back-red::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtnred-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+.tmp_btn_icon-back-red.nonselect::before {
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+
+.tmp_btn_icon-next-red::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtnred-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+.tmp_btn_icon-next-red.nonselect::after {
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+
+.tmp_btn_icon-back-gray::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+
+.tmp_btn_icon-next-gray::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtngray-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+
+.tmp_btn_icon-back-white::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtnwhite-icon.png") no-repeat left top;
+  background-size: 7px 11px; }
+
+.tmp_btn_icon-next-white::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 7px;
+  height: 11px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultnextprevbtnwhite-icon.png") no-repeat left top;
+  background-size: 7px 11px;
+  transform: scale(-1, 1); }
+
+.tmp_btn_icon-timeSelect {
+  padding-right: 30px;
+  position: relative;
+  text-decoration: none;
+  /*&::before {
+  	position: absolute;
+  	content:"";
+  	display: block;
+  	width: 3px;
+  	height: 3px;
+  	right:3px;
+  	top:0;
+  	bottom:3px;
+  	margin-top: auto;
+  	margin-bottom: auto;
+  	border-top:1px solid $primary_blue;
+  	border-right:1px solid $primary_blue;
+  	transform: rotate(-45deg);
+  }*/ }
+  .tmp_btn_icon-timeSelect::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 15px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_timeSelect-icon.png") no-repeat;
+    background-size: 24px 15px; }
+
+.tmp_btn_icon-rentacar::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resultrentacar-icon.png") no-repeat left top;
+  background-size: 25px 25px; }
+
+.tmp_btn_icon-twitter::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_resulttwitter-icon.png") no-repeat left top;
+  background-size: 25px 25px; }
+
+/* ボタン幅調整用 */
+@media print, screen and (min-width: 750px) {
+  .pc_w380px {
+    max-width: 380px;
+    width: 100%; } }
+
+/*=========================================
+フォームテンプレート
+=========================================*/
+/* 1行テキストエリア */
+.top_formEntryFreeInput-text label {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6em;
+  min-height: 40px;
+  height: 2rem;
+  background: #007a52;
+  color: #fff;
+  font-size: 1rem;
+  font-size: calc(1rem * (16 / 15));
+  border-radius: 5px 0 0 5px;
+  line-height: 1; }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeInput-text label {
+      width: 7em; } }
+
+/* テキストエリア */
+/* テキストエリア枠に▼アイコン付けるcss */
+/* セレクトボックス */
+.top_formEntryFreeInput-text select, .top_formEntryFreeInput-text input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/jreast-train-reservation/reserve/wb/img/trainsearch/ts_formselectarrow-icon.png") no-repeat right 10px center;
+  background-color: #fff;
+  background-size: 10px 5px;
+  border: 1px solid #a6a6a6;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  height: 2rem;
+  font-size: 1rem;
+  font-size: calc(1rem * (16 / 15));
+  padding-left: 10px;
+  padding-right: 26px;
+  font-family: inherit;
+  line-height: 1;
+  font-weight: normal; }
+  .top_formEntryFreeInput-text select::-ms-expand, .top_formEntryFreeInput-text input::-ms-expand {
+    /* select要素のデザインを無効にする（IE用） */
+    display: none; }
+  .top_formEntryFreeInput-text select:disabled, .top_formEntryFreeInput-text input:disabled {
+    background: #ebebeb;
+    color: #a6a6a6; }
+
+.top_formEntryFreeStationW {
+  width: 100%;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px; }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeStationW {
+      max-width: 810px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeStationW {
+      padding-bottom: 0; } }
+
+.top_formEntryFreeLineW {
+  width: 100%;
+  height: auto;
+  order: 1; }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeLineW {
+      width: 55%; } }
+
+.top_formEntryFreeInput-text {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative; }
+  .top_formEntryFreeInput-text label {
+    height: auto;
+    padding: 5px; }
+    html[lang=de] .top_formEntryFreeGetonW .top_formEntryFreeInput-text label, html[lang=de] .top_formEntryFreeGetoffW .top_formEntryFreeInput-text label, html[lang=id] .top_formEntryFreeGetonW .top_formEntryFreeInput-text label, html[lang=id] .top_formEntryFreeGetoffW .top_formEntryFreeInput-text label {
+      width: 9em; }
+    html[lang=en] .en-id_w .top_formEntryFreeInput-text label {
+      width: 6em; }
+    html[lang=id] .en-id_w .top_formEntryFreeInput-text label {
+      width: 8em; }
+  .top_formEntryFreeInput-text select {
+    /*		min-height: auto;*/
+    min-height: 42px;
+    /*		height: auto;*/
+    width: calc(100% - 6em); }
+    @media print, screen and (min-width: 750px) {
+      .top_formEntryFreeInput-text select {
+        width: calc(100% - 7em); } }
+    html[lang=de] .top_formEntryFreeGetonW .top_formEntryFreeInput-text select, html[lang=de] .top_formEntryFreeGetoffW .top_formEntryFreeInput-text select, html[lang=id] .top_formEntryFreeGetonW .top_formEntryFreeInput-text select, html[lang=id] .top_formEntryFreeGetoffW .top_formEntryFreeInput-text select {
+      width: calc(100% - 9em); }
+    html[lang=en] .en-id_w .top_formEntryFreeInput-text select {
+      width: calc(100% - 6em); }
+    html[lang=id] .en-id_w .top_formEntryFreeInput-text select {
+      width: calc(100% - 8em); }
+    .top_formEntryFreeInput-text select.input_error {
+      border: 2px solid #b42700;
+      background-color: #f9d6d8; }
+    .top_formEntryFreeInput-text select.ios:focus {
+      position: relative;
+      top: 2px;
+      min-height: 38px; }
+  .top_formEntryFreeInput-text input {
+    /*		min-height: auto;*/
+    min-height: 42px;
+    /*		height: auto;*/
+    width: calc(100% - 6em); }
+    @media print, screen and (min-width: 750px) {
+      .top_formEntryFreeInput-text input {
+        width: calc(100% - 7em); } }
+    html[lang=de] .top_formEntryFreeGetonW .top_formEntryFreeInput-text input, html[lang=de] .top_formEntryFreeGetoffW .top_formEntryFreeInput-text input, html[lang=id] .top_formEntryFreeGetonW .top_formEntryFreeInput-text input, html[lang=id] .top_formEntryFreeGetoffW .top_formEntryFreeInput-text input {
+      width: calc(100% - 9em); }
+    html[lang=en] .en-id_w .top_formEntryFreeInput-text input {
+      width: calc(100% - 6em); }
+    html[lang=id] .en-id_w .top_formEntryFreeInput-text input {
+      width: calc(100% - 8em); }
+    .top_formEntryFreeInput-text input.input_error {
+      border: 2px solid #b42700;
+      background-color: #f9d6d8; }
+    .top_formEntryFreeInput-text input.ios:focus {
+      position: relative;
+      top: 2px;
+      min-height: 38px; }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeInput-text.active {
+      z-index: 9999; } }
+  .top_formEntryFreeInput-text + p {
+    margin-top: 5px; }
+
+.top_formEntryFreeGetonW {
+  width: 100%;
+  height: auto;
+  order: 1; }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeGetonW {
+      width: calc(50% - 40px); } }
+
+.top_formEntryFreeGetoffW {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  order: 3; }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeGetoffW {
+      margin-top: 0;
+      width: calc(50% - 40px); } }
+
+.top_formEntryFreeBtnChangeW {
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  order: 2; }
+  .top_formEntryFreeBtnChangeW button {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: inherit;
+    font-size: 0;
+    border: none;
+    outline: none;
+    background: none;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer; }
+    @media print, screen and (min-width: 750px) {
+      .top_formEntryFreeBtnChangeW button {
+        transform: rotate(90deg); } }
+  @media print, screen and (min-width: 750px) {
+    .top_formEntryFreeBtnChangeW {
+      margin-right: 0;
+      margin-top: 0;
+      display: flex;
+      align-items: center; } }
+
+.top_formEntryFreeLine-error {
+  width: 100%;
+  color: #b42700;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 5px; }
+
+.top_formEntryFreeStation-error {
+  width: 100%;
+  color: #b42700;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 5px;
+  order: 4; }
+
+/*# sourceMappingURL=top_search2.css.map */
